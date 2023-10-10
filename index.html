@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Placar Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Graduate|Orbitron">
+</head>
+<body>
+<div class="page-border">
+<h1>Placar</h1>
+<div class="border clock-border">
+    <div class="clock clock-time">
+        <span id="timer">10:00</span>
+    </div>
+</div>
+<div class="clock-buttons">
+    <button id="reset">RST</button>
+    <button id="start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+        </svg>
+    </button>
+    <button id="add">+30s</button>
+</div>
+
+<div class="placares">
+    <div class="border">
+        <span>Equipe 1</span>
+        <div class="bg-placar">
+            <div class="placar-border"></div>
+            <div class="placar-border"></div>
+            <span id="placarLeft" class="placar">00</span>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="remL" type="button" class="bttn btn-left">-</button>
+            <button id="addL" type="button" class="bttn btn-right">+</button>
+        </div>
+    </div>
+    <div class="border">
+        <span>Equipe 2</span>
+        <div class="bg-placar">
+            <div class="placar-border"></div>
+            <div class="placar-border"></div>
+            <span id="placarRight" class="placar">00</span>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="remR" type="button" class="bttn btn-left">-</button>
+            <button id="addR" type="button" class="bttn btn-right">+</button>
+        </div>
+    </div>
+</div>
+<button id="resetAll">Reset</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    background: #192747;
+    text-align: center;
+    font-family: Graduate, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ECAC34;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.btn-left {
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+    background: rgba(232, 199, 102, 0.85);
+    padding: 0 20px;
+    border-color: transparent;
+}
+
+.btn-right {
+    font-size: 20px;
+    border-radius: 0 10px 10px 0;
+    background: #E8C766;
+    padding: 0 20px;
+    border-color: transparent;
+}
+
+.bttn:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #E8C766;}
+
+span {
+    font-size: 30px;
+    color: #E4E4DC;
+    padding: 0 16px;
+}
+
+.clock-time {
+    font-family: "Orbitron", monospace;
+    font-size: 28px;
+    color: #E4E4DC;
+    padding: 0;
+}
+
+.clock {
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px 27px;
+}
+
+.clock-border {
+    width: 80vw;
+    height: 65px;
+}
+
+.btn-group {
+    padding: 5px;
+}
+
+.placar {
+    font-size: 100px;
+    letter-spacing: 8px;
+    top: -22px; /* Posicione-o no topo do elemento pai */
+    left: -4px;
+    position: absolute;
+    padding: 5px;
+}
+
+button {
+    font-size: 15px;
+    border-radius: 5px;
+    background: rgba(228, 228, 220, 0.80);
+    padding: 5px 15px;
+    border-color: transparent;
+}
+
+button:hover {
+    background: #ffffff;
+}
+
+.border {
+    align-self: center;
+    background: rgba(51, 97, 172, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-color: transparent;
+}
+
+.placares {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 16px;
+}
+
+.placar-border {
+    width: 68px;
+    height: 98px;
+    border-radius: 5px;
+    background: #000;
+    padding: 15px 0;
+}
+
+.bg-placar {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    padding: 10px 0;
+}
+
+.clock-buttons {
+    display: inline-flex;
+    gap: 5px;
+    padding: 5px;
+}
+
+.page-border {
+    border: 3px solid #ECAC34;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
