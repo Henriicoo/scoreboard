@@ -19,7 +19,7 @@ function addRight(number) {
 
     if (number === -1 && currentValue <= 0) return;
 
-    if (currentValue === 99) return;
+    if (number === 1 && currentValue === 99) return;
 
     currentValue += number;
 
