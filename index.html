@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Placar Online</title>
@@ -10,15 +10,19 @@
     <link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
 </head>
 <body>
-<div class="page-border">
-<h1>Placar</h1>
-<div class="borda clock-border">
+<div class="page-border" style="position: absolute; top: 20px">
+<h1 style="position: absolute; top: -25px; background-color: #192747; padding: 5px">Placar</h1>
+<div style="bottom: 20px; position: relative;" class="borda clock-border">
     <div class="clock clock-time">
         <label for="minutesInput"></label><input class="l" type="number"  pattern="[0-9]*" inputmode="numeric" id="minutesInput" min="0" max="60" value="10">:<label for="secondsInput"></label><input class="r" type="number"  pattern="[0-9]*" inputmode="numeric" id="secondsInput" min="0" max="59" value="00">
     </div>
 </div>
-<div class="clock-buttons">
-    <button id="reset">RST</button>
+<div style="bottom: 18px; position: relative;" class="clock-buttons">
+    <button id="reset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-fill" viewBox="0 0 16 16">
+            <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z"/>
+        </svg>
+    </button>
     <button id="start">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
@@ -27,7 +31,7 @@
     <button id="add">+30s</button>
 </div>
 
-<div class="placares">
+<div style="bottom: 10px; position: relative;" class="placares">
     <div class="borda">
         <span>Equipe 1</span>
         <div class="bg-placar">
@@ -53,7 +57,7 @@
         </div>
     </div>
 </div>
-<button id="resetAll">Reset</button>
+<button style="bottom: 10px; position: relative;" id="resetAll">Reset</button>
 </div>
 
 <audio id="xyz" src="timer.mp3" preload="auto"></audio>
