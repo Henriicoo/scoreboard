@@ -67,6 +67,10 @@ let pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
   <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
 </svg>`;
 
+let canVibrate = false;
+if('vibrate' in navigator)
+    canVibrate = true;
+
 function updateTimerDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
@@ -91,6 +95,8 @@ function startTimer() {
             updateTimerDisplay();
         } else {
             clearInterval(timerInterval);
+            document.getElementById('xyz').play();
+            navigator.vibrate([500,500,500])
             alert("Tempo esgotado!");
             isRunning = false;
             startButton.innerHTML = startIcon;
