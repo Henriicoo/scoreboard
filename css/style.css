@@ -40,10 +40,9 @@ span {
 }
 
 .clock-time {
-    font-family: "Orbitron", monospace;
+    font-family: "Digital Numbers", monospace;
     font-size: 28px;
     color: #E4E4DC;
-    padding: 0;
 }
 
 .clock {
@@ -129,4 +128,28 @@ button:hover {
     align-items: center;
     flex-direction: column;
     padding: 5px;
+}
+
+input {
+    background-color: #192747;
+    border-color: transparent;
+    color: #E4E4DC;
+}
+
+input.l {
+    text-align: right;
+}
+
+input.r {
+    text-align: left;
+}
+
+input:disabled {
+    background-color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

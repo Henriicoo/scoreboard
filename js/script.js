@@ -59,6 +59,9 @@ const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const add30Button = document.getElementById('add');
 
+const minutesInput = document.getElementById('minutesInput');
+const secondsInput = document.getElementById('secondsInput');
+
 let startIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
         </svg>`
@@ -74,16 +77,20 @@ if('vibrate' in navigator)
 function updateTimerDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    minutesInput.value = minutes;
+    secondsInput.value = seconds;
 }
 
 function toggleStartPause() {
     if (isRunning) {
         clearInterval(timerInterval);
         startButton.innerHTML = startIcon;
+        toggleInputDisabled(false);
     } else {
         startButton.innerHTML = pauseIcon;
+        timeLeft = parseInt(minutesInput.value, 10) * 60 + parseInt(secondsInput.value, 10);
         startTimer();
+        toggleInputDisabled(true);
     }
     isRunning = !isRunning;
 }
@@ -98,8 +105,8 @@ function startTimer() {
             document.getElementById('xyz').play();
             navigator.vibrate([500,500,500])
             alert("Tempo esgotado!");
-            isRunning = false;
-            startButton.innerHTML = startIcon;
+            
+            this.resetTimer();
         }
     }, 1000);
 }
@@ -117,6 +124,11 @@ function add30Seconds() {
     if (!isRunning) {
         updateTimerDisplay();
     }
+}
+
+function toggleInputDisabled(disabled) {
+    minutesInput.disabled = disabled;
+    secondsInput.disabled = disabled;
 }
 
 startButton.addEventListener('click', toggleStartPause);
