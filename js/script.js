@@ -3,10 +3,10 @@ function addLeft(number) {
     
     let currentValue = parseInt(score.textContent);
 
-    if (number === -1 && currentValue <= 0) {
-        return;
-    }
-    
+    if (number === -1 && currentValue <= 0) return;
+
+    if (currentValue === 99) return;
+
     currentValue += number;
 
     score.textContent = currentValue.toString().padStart(2, '0');
@@ -17,9 +17,9 @@ function addRight(number) {
 
     let currentValue = parseInt(score.textContent);
 
-    if (number === -1 && currentValue <= 0) {
-        return;
-    }
+    if (number === -1 && currentValue <= 0) return;
+
+    if (currentValue === 99) return;
 
     currentValue += number;
 
