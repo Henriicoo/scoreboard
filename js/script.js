@@ -117,6 +117,7 @@ function resetTimer() {
     updateTimerDisplay();
     startButton.innerHTML = startIcon;
     isRunning = false;
+    toggleInputDisabled(false);
 }
 
 function add30Seconds() {
