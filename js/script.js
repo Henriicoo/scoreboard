@@ -32,6 +32,8 @@ function resetAll() {
 
     score = document.getElementById("placarLeft")
     score.textContent = '00';
+    
+    resetTimer()
 }
 
 const remL = document.getElementById('remL');
@@ -54,7 +56,6 @@ let timerInterval;
 let timeLeft = 600; // 10 minutos em segundos
 let isRunning = false;
 
-const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const add30Button = document.getElementById('add');
@@ -77,8 +78,8 @@ if('vibrate' in navigator)
 function updateTimerDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    minutesInput.value = minutes;
-    secondsInput.value = seconds;
+    minutesInput.value = minutes.toString().padStart(2,'00');
+    secondsInput.value = seconds.toString().padStart(2,'00');
 }
 
 function toggleStartPause() {
@@ -103,7 +104,10 @@ function startTimer() {
         } else {
             clearInterval(timerInterval);
             document.getElementById('xyz').play();
-            navigator.vibrate([500,500,500])
+            
+            if(canVibrate)
+                navigator.vibrate([500,500,500])
+
             alert("Tempo esgotado!");
             
             this.resetTimer();
