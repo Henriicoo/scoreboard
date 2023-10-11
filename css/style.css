@@ -12,6 +12,8 @@ h1 {
     color: #ECAC34;
     font-size: 30px;
     text-transform: uppercase;
+    -webkit-text-stroke: 1px #ECAC34;
+    letter-spacing: 2px;
 }
 
 .btn-left {
@@ -152,4 +154,16 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.down-menu {
+    height: 75px;
+    width: 100vw;
+    background-color: rgba(228, 228, 220, 0.80);
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
