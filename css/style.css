@@ -157,7 +157,7 @@ input::-webkit-inner-spin-button {
 }
 
 input.team {
-    width: 180px;
+    width: 150px;
     font-size: 30px;
     color: #E4E4DC;
     text-align: center;
