@@ -14,7 +14,7 @@
 <h1 style="position: absolute; top: -25px; background-color: #192747; padding: 5px">Placar</h1>
 <div style="bottom: 20px; position: relative;" class="borda clock-border">
     <div class="clock clock-time">
-        <label for="minutesInput"></label><input class="l" type="number"  pattern="[0-9]*" inputmode="numeric" id="minutesInput" min="0" max="60" value="10">:<label for="secondsInput"></label><input class="r" type="number"  pattern="[0-9]*" inputmode="numeric" id="secondsInput" min="0" max="59" value="00">
+        <label for="minutesInput"></label><input class="l timer" type="number"  pattern="[0-9]*" inputmode="numeric" id="minutesInput" min="0" max="60" value="10">:<label for="secondsInput"></label><input class="timer r" type="number"  pattern="[0-9]*" inputmode="numeric" id="secondsInput" min="0" max="59" value="00">
     </div>
 </div>
 <div style="bottom: 18px; position: relative;" class="clock-buttons">
@@ -33,7 +33,9 @@
 
 <div style="bottom: 10px; position: relative;" class="placares">
     <div class="borda">
-        <span>Equipe 1</span>
+        <label class="team">
+            <input class="team" value="Equipe 1">
+        </label>
         <div class="bg-placar">
             <div class="placar-border"></div>
             <div class="placar-border"></div>
@@ -45,7 +47,9 @@
         </div>
     </div>
     <div class="borda">
-        <span>Equipe 2</span>
+        <label class="team">
+            <input class="team" value="Equipe 2">
+        </label>
         <div class="bg-placar">
             <div class="placar-border"></div>
             <div class="placar-border"></div>

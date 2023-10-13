@@ -132,7 +132,7 @@ button:hover {
     padding: 50px 50px 5px;
 }
 
-input {
+input.timer {
     background-color: #192747;
     border-color: transparent;
     color: #E4E4DC;
@@ -154,4 +154,16 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+input.team {
+    width: 180px;
+    font-size: 30px;
+    color: #E4E4DC;
+    text-align: center;
+    background: transparent;
+    border-color: transparent;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
